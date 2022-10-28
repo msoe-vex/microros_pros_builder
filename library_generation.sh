@@ -42,3 +42,5 @@ echo "Fixing uxr includes..."
 grep -irlP "#include <uxr.*>"     $INC_PATH | xargs sed -i '/^#include <uxr.*>/s/[<>]/"/g'
 echo "Fixing ucdr includes..."
 grep -irlP "#include <ucdr.*>"    $INC_PATH | xargs sed -i '/^#include <ucdr.*>/s/[<>]/"/g'
+echo "Fixing rosidl includes..."
+grep -irlP "#include <rosidl.*>"    $INC_PATH | xargs sed -i '/^#include <rosidl.*>/s/[<>]/"/g'
